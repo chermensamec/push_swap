@@ -1,1 +1,1 @@
-# psuh_swap
+# push_swap
