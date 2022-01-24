@@ -1,4 +1,4 @@
-#include "ft_push_swap.h"
+#include "push_swap.h"
 #include <stdlib.h>
 
 t_list	*ft_lst_create(int val)

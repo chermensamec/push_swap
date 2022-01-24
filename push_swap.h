@@ -1,5 +1,5 @@
-#ifndef FT_PUSH_SWAP_H
-# define FT_PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 typedef struct s_list
 {
 	struct s_list	*next;
@@ -20,4 +20,6 @@ void	ft_rotate(t_list **lst);
 void	ft_reverse_rotate(t_list **lst);
 char	**ft_split(char const *str, char s);
 int		ft_strlen(const char *s);
+int		ft_atoi(const char *s);
+t_list	*ft_filling_stack(int argc, char *argv[]);
 #endif
