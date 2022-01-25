@@ -45,10 +45,8 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 		{
 			check(*res);
 			val = ft_atoi(*res);
-			write(1, "1", 1);
 			tmp = ft_lst_create(val);	
-			ft_lst_pushback(&head, tmp);	
-			write(1, "1", 1);
+			ft_lst_pushback(&head, tmp);		
 			res++;
 		}
 	}

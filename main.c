@@ -48,9 +48,9 @@ int main(int argc, char *argv[])
 	ft_lst_pushfront(&y, e);
 
 	//ft_lst_del(&a);
-	ft_reverse_rotate(&a);
-	ft_print_list(a);
-	ft_print_list_reverse(a);
+	//ft_reverse_rotate(&a);
+	//ft_print_list(a);
+	//ft_print_list_reverse(a);
 	/*while ( i != argc)
 	{
 		res = ft_split(argv[i], ' ');
@@ -66,5 +66,8 @@ int main(int argc, char *argv[])
 	}*/
 	a = ft_filling_stack(argc, argv);
 	ft_print_list(a);
+	ft_push(&a, &y);
+	ft_print_list(a);
+	ft_print_list(y);
 	return (0);	
 }

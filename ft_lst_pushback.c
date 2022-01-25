@@ -3,10 +3,9 @@
 void	ft_lst_pushback(t_list **lst, t_list *new)
 {
 	t_list	*head;
-
 	if (!new)
-		return ;
-	if (!lst)
+		return ;	
+	if (!*lst)
 	{	
 		*lst = new;
 		return ;
