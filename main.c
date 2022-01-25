@@ -64,7 +64,9 @@ int main(int argc, char *argv[])
 		printf("\n");
 		i++;
 	}*/
+	write(1, "1\n", 2);
 	a = ft_filling_stack(argc, argv);
+	write(1, "2\n", 2);
 	ft_print_list(a);
 	ft_push(&a, &y);
 	ft_print_list(a);

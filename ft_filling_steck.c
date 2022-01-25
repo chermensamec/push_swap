@@ -14,7 +14,7 @@ void	check(char	*str)
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (ft_strlen(str) == 1)
+		if (ft_strlen(str) == 1) // <= 1 ???
 			ft_error();
 		i++;
 	}
@@ -36,9 +36,10 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 
 	head = 0;
 	i = 0;
+	write(1, "3\n", 2);
+	printf("argc = %d\n", argc);
 	while ( i != argc - 1)
 	{
-
 		i++;
 		res = ft_split(argv[i], ' ');
 		while (*res)
@@ -50,5 +51,6 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 			res++;
 		}
 	}
+	write(1, "4\n", 2);
 	return (head);
 }
