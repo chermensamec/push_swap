@@ -50,5 +50,5 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 			res++;
 		}
 	}
-	return (head);
+	return (head); 
 }

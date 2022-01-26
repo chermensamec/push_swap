@@ -1,26 +1,5 @@
 #include "push_swap.h"
 
-void	ft_print_list(t_list *lst)
-{
-	while (lst)
-	{
-		printf("%d ", lst->val);
-		lst = lst->previous;
-	}
-	printf("\n");
-}
-
-void	ft_print_list_reverse(t_list *lst)
-{
-	while (lst->previous)
-		lst = lst->previous;
-	while (lst)
-	{
-		printf("%d ", lst->val);
-		lst = lst->next;
-	}
-	printf("\n");
-}
 
 int main(int argc, char *argv[])
 {
@@ -65,9 +44,10 @@ int main(int argc, char *argv[])
 		i++;
 	}*/
 	a = ft_filling_stack(argc, argv);
-	ft_print_list(a);
-	ft_push(&a, &y);
-	ft_print_list(a);
-	ft_print_list(y);
+	ft_sort_algorithm(&a);
+	//ft_print_list(a);
+	//ft_push(&a, &y);
+	//ft_print_list(a);
+	//ft_print_list(y);
 	return (0);	
 }
