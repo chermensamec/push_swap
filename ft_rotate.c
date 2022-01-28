@@ -4,7 +4,9 @@ void	ft_rotate(t_list **lst)
 {
 	t_list	*tmp;
 	t_list	*head;
-
+	
+	if (!(*lst)->previous)
+		return ;
 	head = (*lst);
 	tmp = (*lst);
 	*lst = (*lst)->previous;

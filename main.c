@@ -44,10 +44,19 @@ int main(int argc, char *argv[])
 		i++;
 	}*/
 	a = ft_filling_stack(argc, argv);
+	//ft_sort_algorithm(a);
+	int	*arr;
+	arr = ft_make_sort_arr(a);
+	for (int i = 0; i < ft_lst_get_len(a); i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
 	ft_sort_algorithm(&a);
 	//ft_print_list(a);
-	//ft_push(&a, &y);
+	//ft_reverse_rotate(&a);
 	//ft_print_list(a);
+	//ft_push(&a, &y);
 	//ft_print_list(y);
 	return (0);	
 }

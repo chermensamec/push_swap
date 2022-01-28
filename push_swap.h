@@ -23,6 +23,8 @@ int		ft_strlen(const char *s);
 int		ft_atoi(const char *s);
 t_list	*ft_filling_stack(int argc, char *argv[]);
 void	ft_print_list(t_list *lst);
-void	ft_print_listi_reverse(t_list *lst);
+void	ft_print_list_reverse(t_list *lst);
 void	ft_sort_algorithm(t_list **lst);
+int		*ft_make_sort_arr(t_list *lst);
+int		ft_lst_get_len(t_list *lst);
 #endif
