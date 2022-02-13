@@ -67,6 +67,6 @@ int		*ft_make_sort_arr(t_list *lst)
 	int	*arr;
 
 	arr = ft_get_arr(lst);
-	ft_quick_sort(arr, 0, ft_lst_get_len(lst));
+	ft_quick_sort(arr, 0, ft_lst_get_len(lst) - 1);
 	return (arr);
 }

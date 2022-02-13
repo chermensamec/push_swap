@@ -22,13 +22,11 @@ int main(int argc, char *argv[])
 	
 	ft_lst_pushfront(&a, b);
 	ft_lst_pushfront(&a, c);
-	ft_lst_pushfront(&a, d);	
-
-	ft_lst_pushfront(&y, e);
-
+	
+	ft_lst_pushfront(&y, d);	
+	ft_lst_pushfront(&y, e);	
 	//ft_lst_del(&a);
 	//ft_reverse_rotate(&a);
-	//ft_print_list(a);
 	//ft_print_list_reverse(a);
 	/*while ( i != argc)
 	{
@@ -44,19 +42,21 @@ int main(int argc, char *argv[])
 		i++;
 	}*/
 	a = ft_filling_stack(argc, argv);
-	//ft_sort_algorithm(a);
-	int	*arr;
-	arr = ft_make_sort_arr(a);
+	//int	*arr;
+	/*arr = ft_make_sort_arr(a);
 	for (int i = 0; i < ft_lst_get_len(a); i++)
 	{
 		printf("%d ", arr[i]);
 	}
-	printf("\n");
+	printf("\n");*/
 	ft_sort_algorithm(&a);
 	//ft_print_list(a);
 	//ft_reverse_rotate(&a);
 	//ft_print_list(a);
 	//ft_push(&a, &y);
 	//ft_print_list(y);
+	res = malloc (sizeof(char) * 10);
+	*res = "it's work !!!";
+	printf("%s", *res);
 	return (0);	
 }

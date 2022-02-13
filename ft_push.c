@@ -8,5 +8,7 @@ void	ft_push(t_list **a, t_list **b)
 		return ;	
 	tmp = (*b)->previous;
 	ft_lst_pushfront(a, (*b));
+	//printf("%p\n", (*a)->previous);
 	*b = tmp;
+	(*b)->next = 0; 
 }

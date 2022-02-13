@@ -4,11 +4,14 @@
 t_list	*ft_lst_create(int val)
 {
 	t_list	*new_list;
+	int	i;
+
 	new_list = (t_list *) malloc(sizeof(*new_list));
 	if (!new_list)
 		return new_list;
 	new_list->val = val;
 	new_list->next = 0;
 	new_list->previous = 0;
+	new_list->operations = (int *) malloc(sizeof(int) * 5);
 	return (new_list);
 }
