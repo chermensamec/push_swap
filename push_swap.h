@@ -30,4 +30,5 @@ void	ft_print_list_reverse(t_list *lst);
 void	ft_sort_algorithm(t_list **lst);
 int		*ft_make_sort_arr(t_list *lst);
 int		ft_lst_get_len(t_list *lst);
+void	ft_find_place(t_list **a, t_list **b);
 #endif
