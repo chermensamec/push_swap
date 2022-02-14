@@ -9,7 +9,13 @@ t_list	*ft_get_last(t_list *lst)
 
 void	ft_sort_three_element(t_list **lst)
 {
-
+	if ((*lst)->val == mid)
+	{
+		if ((*lst)->prev->val != min)
+		{
+			ft_rotate(lst);
+		}
+	}
 }
 
 t_list	*ft_filling_stackB(t_list **lst, int min, int mid, int max)
