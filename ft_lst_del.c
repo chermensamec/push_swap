@@ -7,6 +7,5 @@ void	ft_lst_del(t_list **lst)
 	tmp = *lst;
 	*lst = (*lst)->previous;
 	(*lst)->next = 0;
-	free((*lst)->operations);
 	free(tmp);
 }

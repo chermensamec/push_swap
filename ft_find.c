@@ -1,26 +1,26 @@
 #include "push_swap.h"
 
-void	ft_find_place(t_list **a, t_list **b)
+void	ft_find_place(t_list **a, t_list *b)
 {
 	int		min;
-	int		place;
+	int		count;
 	t_list	*head;
-
-	min = (*a)->val;
-	place = 0;
+	t_list	*place;
+	
+	min = 2173213;
+	place = (*a);
+	count = 0;
 	head = *a;
 	while (head->previous)
-	{
-		if (head->val < min)
+	{	
+		if (head->val < min && b->val < head->val)
+		{
+			place = head;
 			min = head->val;
-			place += 1;
+			count += 1;	
+			printf("find: %d\n", place->val);
+		}
+		head = head->previous;
 	}
-	if (place == 1)
-		ft_swap(*a);
-	else if (place > ft_lst_get_len(*a) / 2)
-		while (place-- != 0)
-			ft_reverse_rotate(a);
-	else
-		while (place-- != 0)
-			ft_rotate(a);
+	printf("find: %d\n", place->val);
 }

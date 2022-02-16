@@ -6,7 +6,15 @@ typedef struct s_list
 	struct s_list	*next;
 	struct s_list	*previous;
 	int				val;
-	int		*operations;
+	int				rra;
+	int				rrb;
+	int				rrr;
+	int				pb;
+	int				pa;
+	int				ra;
+	int				rb;
+	int				rr;
+	int				is_stack_a;
 } t_list;
 
 #include <stdlib.h>
@@ -17,7 +25,7 @@ t_list	*ft_lst_create(int val);
 void	ft_lst_pushfront(t_list **lst, t_list	*my_new);
 void	ft_lst_pushback(t_list **lst, t_list *my_new);
 void	ft_lst_del(t_list **lst);
-void	ft_swap(t_list *lst);
+void	ft_swap(t_list **lst);
 void	ft_push(t_list **a, t_list **b);
 void	ft_rotate(t_list **lst);
 void	ft_reverse_rotate(t_list **lst);
@@ -30,5 +38,5 @@ void	ft_print_list_reverse(t_list *lst);
 void	ft_sort_algorithm(t_list **lst);
 int		*ft_make_sort_arr(t_list *lst);
 int		ft_lst_get_len(t_list *lst);
-void	ft_find_place(t_list **a, t_list **b);
+void	ft_find_place(t_list **a, t_list *b);
 #endif

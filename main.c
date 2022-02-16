@@ -13,13 +13,13 @@ int main(int argc, char *argv[])
 	char	**res;
 	int		tmp;
 
-	a = ft_lst_create(1);
+	/*a = ft_lst_create(1);
 	b = ft_lst_create(2);	
 	c = ft_lst_create(3);
 	d = ft_lst_create(4);		
 	e = ft_lst_create(5);	
 	y = ft_lst_create(6);	
-	
+	*/
 	ft_lst_pushfront(&a, b);
 	ft_lst_pushfront(&a, c);
 	
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		printf("%d ", arr[i]);
 	}
 	printf("\n");*/
-	ft_sort_algorithm(&a);
+	ft_sort_algorithm(&a); // валится при одинаковых символах
 	//ft_print_list(a);
 	//ft_reverse_rotate(&a);
 	//ft_print_list(a);
