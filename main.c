@@ -4,14 +4,6 @@
 int main(int argc, char *argv[])
 {
 	t_list	*a;
-	t_list	*b;
-	t_list	*c;
-	t_list	*d;
-	t_list	*e;
-	t_list	*y;
-	int		i;
-	char	**res;
-	int		tmp;
 
 	/*a = ft_lst_create(1);
 	b = ft_lst_create(2);	
@@ -55,8 +47,5 @@ int main(int argc, char *argv[])
 	//ft_print_list(a);
 	//ft_push(&a, &y);
 	//ft_print_list(y);
-	res = malloc (sizeof(char) * 10);
-	*res = "it's work !!!";
-	printf("%s", *res);
 	return (0);	
 }

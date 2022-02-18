@@ -2,13 +2,12 @@
 
 void ft_error()
 {
-	write(2, "Error", 5);
+	write(2, "Error\n", 6);
 	exit(1);
 }
 
 void	check(char	*str)
 {
-	int	conter;
 	int	i;
 
 	i = 0;

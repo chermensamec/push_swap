@@ -2,8 +2,6 @@
 
 void	ft_optimize(t_list *b)
 {
-
-//printf("ra = %d rra = %d  rb = %d  rrb = %d rr = %d rrr = %d\n", b->ra, b->rra, b->rb, b->rrb, b->rr, b->rrr);
 	while (b->ra && b->rb)
 	{
 		b->ra -= 1;
@@ -16,13 +14,11 @@ void	ft_optimize(t_list *b)
 		b->rrb -= 1;
 		b->rrr += 1;
 	}
-
-//printf("ra = %d rra = %d  rb = %d  rrb = %d rr = %d rrr = %d\n", b->ra, b->rra, b->rb, b->rrb, b->rr, b->rrr);
 }
 
 void	ft_count_operations(t_list *a, t_list *b, int place_a, int place_b)
 {
-	//printf("%d %d %d %d\n", place_a, ft_lst_get_len(a) / 2, place_b, ft_lst_get_len(b) / 2);
+//	printf("%d %d %d %d\n", place_a, ft_lst_get_len(a) / 2, place_b, ft_lst_get_len(b) / 2);
 	if (place_a <= ft_lst_get_len(a) / 2)
 	{
 		while (place_a--)
@@ -43,8 +39,8 @@ void	ft_count_operations(t_list *a, t_list *b, int place_a, int place_b)
 		while (place_b++ != ft_lst_get_len(b))
 			b->rrb += 1;
 	}
-	ft_optimize(b);
-}	
+	ft_optimize(b);	
+}
 
 void	ft_find_place(t_list *a, t_list *b, int place_b)
 {
@@ -52,10 +48,12 @@ void	ft_find_place(t_list *a, t_list *b, int place_b)
 	int		place_a;
 	int		count;
 	t_list		*head;
-	
+
+		
 	count = 0;
 	min = 2147483647;
 	head = a;
+	//ft_print_list(a);
 	while (head)
 	{	
 		//printf("%d %d %d %d\n", head->val, min, b->val, head->val);
@@ -63,13 +61,13 @@ void	ft_find_place(t_list *a, t_list *b, int place_b)
 		{	
 			place_a = count;	
 			min = head->val;
-			printf("find for %d: %d\n", b->val, head->val);	
+			//printf("find for %d: %d\n", b->val, head->val);	
 		}
 		count += 1;
-		printf("%p ", head->);
+		//printf("%p ", head->);
 		head = head->previous;
 	}
-	ft_count_operations(a, b, place_a, place_b);
+	ft_count_operations(a, b, place_a, place_b);	
 }
 
 int	ft_get_sum_action(t_list *b)
@@ -101,10 +99,10 @@ void	ft_sort_push_swap(t_list **a, t_list **b)
 	int	count_b;
 	t_list	*head;
 
-	count_b = 0;
 	head = *b;
 	while (*b)
 	{
+		count_b = 0;
 		while (head)
 		{
 		//printf("val: %d\n", head->val);
@@ -113,10 +111,12 @@ void	ft_sort_push_swap(t_list **a, t_list **b)
 			//printf("ra = %d rra = %d  rb = %d  rrb = %d\n", head->ra, head->rra, head->rb, head->rrb);
 			head = head->previous;
 		}
-		//printf("%d\n", ft_get_fastelem(*b)->val);
-		ft_set_onplace(a, b, ft_get_fastelem(*b));
-		ft_print_list(*a);
+		//printf("fastelem: %d\n", ft_get_fastelem(*b)->val);		
+		ft_set_onplace(a, b, ft_get_fastelem(*b));	
+		//printf("asd1\n");
+		//ft_print_list(*a);
 		head = *b;
-		printf("val: %d\n", head->val);
+		//if (head)
+		//	printf("val: %d\n", head->val);
 	}
 }

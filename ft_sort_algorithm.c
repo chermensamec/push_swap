@@ -72,12 +72,13 @@ void	ft_sort_algorithm(t_list **lst)
 	max = ft_make_sort_arr(*lst)[ft_lst_get_len(*lst) - 1];	
 	mid = ft_make_sort_arr(*lst)[(ft_lst_get_len(*lst) - 1) / 2];
 	b = ft_filling_stackB(lst, min, mid,max);
-	ft_print_list(b);	
+	//ft_print_list(b);	
 	//ft_print_list_reverse(b);	
-	ft_print_list(*lst);
+	//ft_print_list(*lst);
 	
 	ft_sort_push_swap(lst, &b);
 	//ft_print_list_reverse(*lst);
 	//printf("len%d\n", ft_lst_get_len(b));
-	printf("min = %d mid = %d  max = %d\n", min, mid, max);	
+	//printf("min = %d mid = %d  max = %d\n", min, mid, max);		
+//	ft_print_list(*lst);
 }
