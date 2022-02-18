@@ -66,6 +66,7 @@ void	ft_sort_algorithm(t_list **lst)
 	int	mid;
 	t_list	*b;
 
+	
 	b = 0;
 	min = ft_make_sort_arr(*lst)[0];
 	max = ft_make_sort_arr(*lst)[ft_lst_get_len(*lst) - 1];	
@@ -74,7 +75,9 @@ void	ft_sort_algorithm(t_list **lst)
 	ft_print_list(b);	
 	//ft_print_list_reverse(b);	
 	ft_print_list(*lst);
-	//ft_print_list_reverse(*lst);	
-	ft_find_place(lst, b);
-	printf("min = %d mid = %d  max = %d", min, mid, max);
+	
+	ft_sort_push_swap(lst, &b);
+	//ft_print_list_reverse(*lst);
+	//printf("len%d\n", ft_lst_get_len(b));
+	printf("min = %d mid = %d  max = %d\n", min, mid, max);	
 }

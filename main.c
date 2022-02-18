@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	d = ft_lst_create(4);		
 	e = ft_lst_create(5);	
 	y = ft_lst_create(6);	
-	*/
+	
 	ft_lst_pushfront(&a, b);
 	ft_lst_pushfront(&a, c);
 	
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	//ft_lst_del(&a);
 	//ft_reverse_rotate(&a);
 	//ft_print_list_reverse(a);
-	/*while ( i != argc)
+	while ( i != argc)
 	{
 		res = ft_split(argv[i], ' ');
 		while (*res)

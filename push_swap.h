@@ -10,7 +10,7 @@ typedef struct s_list
 	int				rrb;
 	int				rrr;
 	int				pb;
-	int				pa;
+	int				pa;	
 	int				ra;
 	int				rb;
 	int				rr;
@@ -38,5 +38,6 @@ void	ft_print_list_reverse(t_list *lst);
 void	ft_sort_algorithm(t_list **lst);
 int		*ft_make_sort_arr(t_list *lst);
 int		ft_lst_get_len(t_list *lst);
-void	ft_find_place(t_list **a, t_list *b);
+void	ft_sort_push_swap(t_list **a, t_list **b);
+void	ft_set_onplace(t_list **a, t_list **b, t_list *belem); 
 #endif
