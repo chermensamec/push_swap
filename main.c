@@ -1,51 +1,35 @@
 #include "push_swap.h"
 
+void	ft_check_sort(t_list *a, int *sort_arr)
+{
+	while (a)
+	{
+		if (a->val != (*sort_arr++))
+		       return ;
+		a = a->previous;
+	}
+	exit(0);
+}
 
 int main(int argc, char *argv[])
 {
 	t_list	*a;
+	t_list	*head;
+	int	*sort_arr;
 
-	/*a = ft_lst_create(1);
-	b = ft_lst_create(2);	
-	c = ft_lst_create(3);
-	d = ft_lst_create(4);		
-	e = ft_lst_create(5);	
-	y = ft_lst_create(6);	
-	
-	ft_lst_pushfront(&a, b);
-	ft_lst_pushfront(&a, c);
-	
-	ft_lst_pushfront(&y, d);	
-	ft_lst_pushfront(&y, e);	
-	//ft_lst_del(&a);
-	//ft_reverse_rotate(&a);
-	//ft_print_list_reverse(a);
-	while ( i != argc)
-	{
-		res = ft_split(argv[i], ' ');
-		while (*res)
-		{
-			check(*res);
-			tmp = ft_atoi(*res);
-			printf("%d ", tmp);	
-			res++;
-		}
-		printf("\n");
-		i++;
-	}*/
 	a = ft_filling_stack(argc, argv);
-	//int	*arr;
-	/*arr = ft_make_sort_arr(a);
-	for (int i = 0; i < ft_lst_get_len(a); i++)
+	sort_arr = ft_get_sort_arr(a);
+	ft_check_sort(a, sort_arr);
+	if (ft_lst_get_len(a) == 2)
+		write(1, "ra\n", 3);
+	else 
+		ft_sort_algorithm(&a, sort_arr);
+	while(*sort_arr != a->val)
 	{
-		printf("%d ", arr[i]);
+		ft_reverse_rotate(&a);
+		write(1, "rra\n", 4);
 	}
-	printf("\n");*/
-	ft_sort_algorithm(&a); // валится при одинаковых символах
-	//ft_print_list(a);
-	//ft_reverse_rotate(&a);
-	//ft_print_list(a);
-	//ft_push(&a, &y);
-	//ft_print_list(y);
+	ft_print_list(a);
+
 	return (0);	
 }

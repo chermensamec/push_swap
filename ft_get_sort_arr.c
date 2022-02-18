@@ -62,7 +62,7 @@ void ft_quick_sort(int *arr, int low, int high)
 	}
 }
 
-int		*ft_make_sort_arr(t_list *lst)
+int		*ft_get_sort_arr(t_list *lst)
 {
 	int	*arr;
 

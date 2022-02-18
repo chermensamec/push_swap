@@ -51,7 +51,7 @@ void	ft_set_onplace(t_list **a, t_list **b, t_list *belem)
 		write(1, "rrb\n", 4);
 	}
 	ft_push(a, b);
-	write(1, "pb\n", 3);
+	write(1, "pa\n", 3);
 	ft_makenull_field(*b);
 	return ;
 }

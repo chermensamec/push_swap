@@ -59,7 +59,7 @@ t_list	*ft_filling_stackB(t_list **lst, int min, int mid, int max)
 	return (b);
 }
 
-void	ft_sort_algorithm(t_list **lst)
+void	ft_sort_algorithm(t_list **lst, int *sort_arr)
 {
 	int	min;
 	int	max;
@@ -68,17 +68,10 @@ void	ft_sort_algorithm(t_list **lst)
 
 	
 	b = 0;
-	min = ft_make_sort_arr(*lst)[0];
-	max = ft_make_sort_arr(*lst)[ft_lst_get_len(*lst) - 1];	
-	mid = ft_make_sort_arr(*lst)[(ft_lst_get_len(*lst) - 1) / 2];
+	min = sort_arr[0];
+	max = sort_arr[ft_lst_get_len(*lst) - 1];	
+	mid = sort_arr[(ft_lst_get_len(*lst) - 1) / 2];
 	b = ft_filling_stackB(lst, min, mid,max);
-	//ft_print_list(b);	
-	//ft_print_list_reverse(b);	
-	//ft_print_list(*lst);
 	
 	ft_sort_push_swap(lst, &b);
-	//ft_print_list_reverse(*lst);
-	//printf("len%d\n", ft_lst_get_len(b));
-	//printf("min = %d mid = %d  max = %d\n", min, mid, max);		
-//	ft_print_list(*lst);
 }

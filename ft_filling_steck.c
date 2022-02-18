@@ -1,12 +1,6 @@
 #include "push_swap.h"
 
-void ft_error()
-{
-	write(2, "Error\n", 6);
-	exit(1);
-}
-
-void	check(char	*str)
+void	ft_check_wrong_symbol(char	*str)
 {
 	int	i;
 
@@ -25,11 +19,21 @@ void	check(char	*str)
 	}
 }
 
+void ft_check_repeat(t_list *head, t_list *current)
+{
+	while (head)
+	{
+		if (head->val == current->val)
+			ft_error();
+		head = head->previous;
+	}
+}
+
 t_list	*ft_filling_stack(int argc, char *argv[])
 {
 	int		i;
 	t_list	*head;
-	t_list	*tmp;
+	t_list	*current;
 	int		val;
 	char	**res;
 
@@ -42,10 +46,11 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 		res = ft_split(argv[i], ' ');
 		while (*res)
 		{
-			check(*res);
+			ft_check_wrong_symbol(*res);
 			val = ft_atoi(*res);
-			tmp = ft_lst_create(val);
-			ft_lst_pushback(&head, tmp);
+			current = ft_lst_create(val);	
+			ft_check_repeat(head, current);
+			ft_lst_pushback(&head, current);
 			res++;
 		}
 	}

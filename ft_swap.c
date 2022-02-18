@@ -9,11 +9,7 @@ void	ft_swap(t_list **lst)
 	if (!(*lst)->previous)
 	   return ;	
 	tmp = (*lst)->previous;
-	
-	//(*lst)->previous = (*lst);
-	//(*lst)->previous->previous = tmp->previous;
-	//(*lst)->previous->next = tmp;;
-	//(*lst)->next = 0;	
+	if ((*lst)->previous->previous)
 	head->previous = (*lst)->previous->previous;
 	if ((*lst)->previous->next)
 		head->previous->next = head;

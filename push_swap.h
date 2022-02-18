@@ -35,9 +35,10 @@ int		ft_atoi(const char *s);
 t_list	*ft_filling_stack(int argc, char *argv[]);
 void	ft_print_list(t_list *lst);
 void	ft_print_list_reverse(t_list *lst);
-void	ft_sort_algorithm(t_list **lst);
-int		*ft_make_sort_arr(t_list *lst);
+void	ft_sort_algorithm(t_list **lst, int *sort_arr);
+int		*ft_get_sort_arr(t_list *lst);
 int		ft_lst_get_len(t_list *lst);
 void	ft_sort_push_swap(t_list **a, t_list **b);
 void	ft_set_onplace(t_list **a, t_list **b, t_list *belem); 
+void	ft_error();
 #endif
