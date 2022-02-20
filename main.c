@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
 	t_list	*a;
 	t_list	*head;
 	int	*sort_arr;
-
+	if (argc == 1)
+		return (0);
 	a = ft_filling_stack(argc, argv);
 	sort_arr = ft_get_sort_arr(a);
 	ft_check_sort(a, sort_arr);
@@ -30,6 +31,5 @@ int main(int argc, char *argv[])
 		write(1, "rra\n", 4);
 	}
 	ft_print_list(a);
-
 	return (0);	
 }

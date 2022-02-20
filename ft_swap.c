@@ -7,7 +7,7 @@ void	ft_swap(t_list **lst)
 
 	head = *lst;
 	if (!(*lst)->previous)
-	   return ;	
+	   return ;// заменить на ошибку	
 	tmp = (*lst)->previous;
 	if ((*lst)->previous->previous)
 	head->previous = (*lst)->previous->previous;
