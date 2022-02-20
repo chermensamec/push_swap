@@ -13,9 +13,9 @@ void	ft_check_sort(t_list *a, int *sort_arr)
 
 int main(int argc, char *argv[])
 {
-	t_list	*a;
-	
+	t_list	*a;	
 	int	*sort_arr;
+
 	if (argc == 1)
 		return (0);
 	a = ft_filling_stack(argc, argv);

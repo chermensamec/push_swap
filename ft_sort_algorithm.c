@@ -48,6 +48,11 @@ t_list	*ft_filling_stackB(t_list **lst, int min, int mid, int max)
 		{
 			ft_push(&b, lst);
 			write(1, "pb\n", 3);
+			if (b->val > mid)
+			{
+				ft_rotate(&b);
+				write(1, "rb\n", 3);
+			}
 		}
 		else
 		{
