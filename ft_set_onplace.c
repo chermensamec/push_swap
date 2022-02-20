@@ -14,22 +14,8 @@ void	ft_makenull_field(t_list *b)
 	}
 }
 
-void	ft_set_onplace(t_list **a, t_list **b, t_list *belem)
+void ft_make_rotate(t_list **a, t_list **b, t_list *belem)
 {
-	
-//printf("ra = %d rra = %d  rb = %d  rrb = %d\n", belem->ra, belem->rra, belem->rb, belem->rrb);
-	while (belem->rrr--)
-	{
-		ft_reverse_rotate(a);
-		ft_reverse_rotate(b);	
-		write(1, "rrr\n", 4);
-	}
-	while (belem->rr--)
-	{
-		ft_rotate(a);
-		ft_rotate(b);
-		write(1, "rr\n", 3);
-	}
 	while (belem->ra--)
 	{
 		ft_rotate(a);	
@@ -50,6 +36,23 @@ void	ft_set_onplace(t_list **a, t_list **b, t_list *belem)
 		ft_reverse_rotate(b);
 		write(1, "rrb\n", 4);
 	}
+}
+
+void	ft_set_onplace(t_list **a, t_list **b, t_list *belem)
+{	
+	while (belem->rrr--)
+	{
+		ft_reverse_rotate(a);
+		ft_reverse_rotate(b);	
+		write(1, "rrr\n", 4);
+	}
+	while (belem->rr--)
+	{
+		ft_rotate(a);
+		ft_rotate(b);
+		write(1, "rr\n", 3);
+	}
+	ft_make_rotate(a, b, belem);
 	ft_push(a, b);
 	write(1, "pa\n", 3);
 	ft_makenull_field(*b);

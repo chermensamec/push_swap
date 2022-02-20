@@ -9,12 +9,9 @@ typedef struct s_list
 	int				rra;
 	int				rrb;
 	int				rrr;
-	int				pb;
-	int				pa;	
 	int				ra;
 	int				rb;
 	int				rr;
-	int				is_stack_a;
 } t_list;
 
 #include <stdlib.h>
@@ -39,6 +36,8 @@ void	ft_sort_algorithm(t_list **lst, int *sort_arr);
 int		*ft_get_sort_arr(t_list *lst);
 int		ft_lst_get_len(t_list *lst);
 void	ft_sort_push_swap(t_list **a, t_list **b);
-void	ft_set_onplace(t_list **a, t_list **b, t_list *belem); 
+void	ft_set_onplace(t_list **a, t_list **b, t_list *belem);
+void	ft_sort_three_element(t_list **a, int min, int mid, int max);
+void	ft_sort_five(t_list **a, int *arr);
 void	ft_error();
 #endif

@@ -43,8 +43,8 @@ t_list	*ft_filling_stackB(t_list **lst, int min, int mid, int max)
 	b = 0;
 	while (ft_lst_get_len((*lst)) > 3)
 	{
-		if ((*lst)->val != min && (*lst)->val != max &&
-				(*lst)->val != mid)
+		if ((*lst)->val != min && (*lst)->val != max
+				&& (*lst)->val != mid)
 		{
 			ft_push(&b, lst);
 			write(1, "pb\n", 3);
@@ -66,12 +66,10 @@ void	ft_sort_algorithm(t_list **lst, int *sort_arr)
 	int	mid;
 	t_list	*b;
 
-	
 	b = 0;
 	min = sort_arr[0];
 	max = sort_arr[ft_lst_get_len(*lst) - 1];	
 	mid = sort_arr[(ft_lst_get_len(*lst) - 1) / 2];
-	b = ft_filling_stackB(lst, min, mid,max);
-	
+	b = ft_filling_stackB(lst, min, mid, max);
 	ft_sort_push_swap(lst, &b);
 }

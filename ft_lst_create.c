@@ -15,11 +15,8 @@ t_list	*ft_lst_create(int val)
 	new_list->rra = 0;
 	new_list->rrb = 0;
 	new_list->rrr = 0;
-	new_list->pb = 0;
-	new_list->pa = 0;
 	new_list->ra = 0;
 	new_list->rb = 0;
 	new_list->rr = 0;
-	new_list->is_stack_a = 1;	
 	return (new_list);
 }

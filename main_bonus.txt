@@ -26,9 +26,9 @@ void	ft_check_operation(char *buff, t_list **b, t_list **a)
 	else if (buff[0] == 'p')
 	{
 		if (buff[1] == 'a')
-			ft_push(a);
+			ft_push(a, b);
 		else
-			ft_push(b);
+			ft_push(b, a);
 	}
 	else if (buff[0] == 's')
 	{
