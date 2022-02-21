@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:11:17 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 18:41:15 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/21 22:07:20 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lst_del(t_list **lst)
 	tmp = *lst;
 	*lst = (*lst)->previous;
 	if (*lst)
-	(*lst)->next = 0;
+		(*lst)->next = 0;
 	free(tmp);
 	tmp = 0;
 }

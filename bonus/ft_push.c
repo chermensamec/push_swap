@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:15:11 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:15:14 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/22 01:23:48 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_push(t_list **a, t_list **b)
 	t_list	*tmp;
 
 	if (!*b)
-		return ;
+		ft_error();
 	tmp = (*b)->previous;
 	ft_lst_pushfront(a, (*b));
 	*b = tmp;

@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:29:16 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:29:17 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/22 01:09:27 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ void	ft_set_onplace(t_list **a, t_list **b, t_list *belem);
 void	ft_sort_three_element(t_list **a, int min, int mid, int max);
 void	ft_sort_five(t_list **a, int *arr);
 void	ft_error(void);
+void	ft_check_operation(char *operation, t_list **a, t_list **b);
 #endif
