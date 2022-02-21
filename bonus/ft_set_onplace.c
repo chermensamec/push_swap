@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_set_onplace.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/21 16:17:08 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/21 16:17:09 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	ft_makenull_field(t_list *b)
@@ -14,21 +26,21 @@ void	ft_makenull_field(t_list *b)
 	}
 }
 
-void ft_make_rotate(t_list **a, t_list **b, t_list *belem)
+void	ft_make_rotate(t_list **a, t_list **b, t_list *belem)
 {
 	while (belem->ra--)
 	{
-		ft_rotate(a);	
+		ft_rotate(a);
 		write(1, "ra\n", 3);
 	}
 	while (belem->rb--)
 	{
-		ft_rotate(b);	
+		ft_rotate(b);
 		write(1, "rb\n", 3);
 	}
 	while (belem->rra--)
 	{
-		ft_reverse_rotate(a);	
+		ft_reverse_rotate(a);
 		write(1, "rra\n", 4);
 	}
 	while (belem->rrb--)
@@ -43,7 +55,7 @@ void	ft_set_onplace(t_list **a, t_list **b, t_list *belem)
 	while (belem->rrr--)
 	{
 		ft_reverse_rotate(a);
-		ft_reverse_rotate(b);	
+		ft_reverse_rotate(b);
 		write(1, "rrr\n", 4);
 	}
 	while (belem->rr--)

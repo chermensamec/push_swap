@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_reverse_rotate.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/21 16:15:37 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/21 16:15:38 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	ft_reverse_rotate(t_list **lst)
@@ -7,11 +19,11 @@ void	ft_reverse_rotate(t_list **lst)
 
 	head = (*lst);
 	while (head->previous)
-		head =  head->previous;
+		head = head->previous;
 	tmp = head;
 	head = head->next;
 	head->previous = 0;
-	(*lst)->next = tmp;	
+	(*lst)->next = tmp;
 	tmp->previous = (*lst);
 	(*lst) = tmp;
 	tmp->next = 0;

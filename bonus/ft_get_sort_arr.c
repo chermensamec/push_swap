@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_sort_arr.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/21 16:10:25 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/21 16:10:26 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	ft_int_swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
+
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
@@ -16,7 +29,7 @@ int	*ft_get_arr(t_list *lst)
 
 	i = 0;
 	len = ft_lst_get_len(lst);
-	arr = (int*)malloc (sizeof(int) * (ft_lst_get_len(lst)));
+	arr = (int *)malloc (sizeof(int) * (ft_lst_get_len(lst)));
 	if (!arr)
 		return (0);
 	while (i < len)
@@ -30,13 +43,12 @@ int	*ft_get_arr(t_list *lst)
 int	ft_partition(int *arr, int low, int high)
 {
 	int	pivot;
-	int wall;
+	int	wall;
 	int	j;
 
 	j = low;
 	wall = low - 1;
-	pivot = arr[high];   
-
+	pivot = arr[high];
 	while (j < high)
 	{
 		if (arr[j] < pivot)
@@ -50,19 +62,19 @@ int	ft_partition(int *arr, int low, int high)
 	return (wall + 1);
 }
 
-void ft_quick_sort(int *arr, int low, int high)
+void	ft_quick_sort(int *arr, int low, int high)
 {
 	int	pivot;
 
 	if (low < high)
 	{
-		pivot = ft_partition(arr, low, high );
-		ft_quick_sort(arr, low , pivot - 1);
-		ft_quick_sort(arr, pivot + 1, high);	
+		pivot = ft_partition(arr, low, high);
+		ft_quick_sort(arr, low, pivot - 1);
+		ft_quick_sort(arr, pivot + 1, high);
 	}
 }
 
-int		*ft_get_sort_arr(t_list *lst)
+int	*ft_get_sort_arr(t_list *lst)
 {
 	int	*arr;
 

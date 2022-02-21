@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/21 15:59:11 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/21 16:02:08 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 #define INT_MIN "-2147483648"
@@ -6,7 +17,7 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
@@ -14,7 +25,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int	ft_check_minmax (const char *str)
+int	ft_check_minmax(const char *str)
 {
 	int	len;
 
@@ -36,22 +47,22 @@ int	ft_check_minmax (const char *str)
 	return (0);
 }
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	res;
 	int	k;
-	
+
 	res = 0;
 	k = 1;
 	if (ft_check_minmax(str))
 		ft_error();
-	if(*str == '-' || *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			k = -1;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')
-		res = res * 10 + (int) (*(str++) - '0');
+		res = res * 10 + (int)(*(str++) - '0');
 	return (res * k);
 }
