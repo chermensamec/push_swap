@@ -53,7 +53,7 @@ void	ft_check_operation(char *operation, t_list **a, t_list **b)
 			exit(1);
 	}
 	else if (operation[0] == 's')
-		ft_check_push(operaation, a, b);
+		ft_check_push(operation, a, b);
 	else
 		exit(1);
 }

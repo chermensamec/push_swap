@@ -21,7 +21,7 @@ void	ft_free_listarr(t_list **a, int *sort_arr)
 void	ft_read_operations(t_list **a, t_list **b)
 {
 	char	operation[4];
-	char	*c;
+	char	c;
 	int		i;
 
 	i = 0;
@@ -45,6 +45,8 @@ int	main(int argc, char *argv[])
 	int		*arr;
 	t_list	*b;
 
+	if (argc == 1)
+		return (0);
 	b = 0;
 	a = ft_filling_stack(argc, argv);
 	arr = ft_get_sort_arr(a);

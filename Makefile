@@ -13,8 +13,6 @@ INCLUDES = push_swap.h
 
 all : $(NAME)
 
-lib : 
-	make -sC $(DIR_LIB)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) 
