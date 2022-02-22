@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:16:07 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/22 17:45:01 by chermen          ###   ########.fr       */
+/*   Updated: 2022/02/22 23:25:05 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_rotate(t_list **lst)
 {
 	t_list	*tmp;
 	t_list	*head;
-	
+
 	if (!(*lst))
 		ft_error();
 	if (!(*lst)->previous)

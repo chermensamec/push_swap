@@ -47,7 +47,7 @@ void	ft_check_operation(char *operation, t_list **a, t_list **b)
 	{
 		if (operation[1] == 'a')
 			ft_push(a, b);
-		else if (operation[2] == 'b')
+		else if (operation[1] == 'b')
 			ft_push(b, a);
 		else
 			exit(1);
