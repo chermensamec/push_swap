@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_filling_steck.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:07:14 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 17:55:05 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/25 19:27:33 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 {
 	int		i;
 	t_list	*head;
-	t_list	*current;
 	char	**res;
 	int		j;
 
@@ -56,12 +55,13 @@ t_list	*ft_filling_stack(int argc, char *argv[])
 		j = 0;
 		i++;
 		res = ft_split(argv[i], ' ');
+		if (!(*res))
+			ft_error();
 		while (res[j])
 		{
 			ft_check_wrong_symbol(res[j]);
-			current = ft_lst_create(ft_atoi(res[j]));
-			ft_check_repeat(head, current);
-			ft_lst_pushback(&head, current);
+			ft_check_repeat(head, ft_lst_create(ft_atoi(res[j])));
+			ft_lst_pushback(&head, ft_lst_create(ft_atoi(res[j])));
 			free(res[j++]);
 		}
 		if (*res)

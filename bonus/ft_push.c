@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:15:11 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/22 23:24:00 by chermen          ###   ########.fr       */
+/*   Updated: 2022/02/25 19:01:42 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_push(t_list **a, t_list **b)
 {
 	t_list	*tmp;
 
-	if (!*a)
-		ft_error();
+	if (!*b)
+		return ;
 	tmp = (*b)->previous;
 	ft_lst_pushfront(a, (*b));
 	*b = tmp;

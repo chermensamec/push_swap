@@ -1,4 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_operation.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/25 19:16:18 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/25 19:16:19 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap_bonus.h"
 
 void	ft_check_reverse(char *operation, t_list **a, t_list **b)
 {
@@ -21,7 +33,7 @@ void	ft_check_reverse(char *operation, t_list **a, t_list **b)
 	else if (operation[1] == 'b')
 		ft_rotate(b);
 	else
-		exit(1);
+		ft_error();
 }
 
 void	ft_check_push(char *operation, t_list **a, t_list **b)
@@ -36,7 +48,7 @@ void	ft_check_push(char *operation, t_list **a, t_list **b)
 	else if (operation[1] == 'b')
 		ft_swap(b);
 	else
-		exit(1);
+		ft_error();
 }
 
 void	ft_check_operation(char *operation, t_list **a, t_list **b)
@@ -50,10 +62,10 @@ void	ft_check_operation(char *operation, t_list **a, t_list **b)
 		else if (operation[1] == 'b')
 			ft_push(b, a);
 		else
-			exit(1);
+			ft_error();
 	}
 	else if (operation[0] == 's')
 		ft_check_push(operation, a, b);
 	else
-		exit(1);
+		ft_error();
 }

@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <onelda@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/21 16:28:19 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/25 19:13:39 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int	ft_check_sort(t_list *a, int *sort_arr)
+void	ft_check_sort(t_list *a, int *sort_arr)
 {
 	while (a)
 	{
 		if (a->val != (*sort_arr++))
-			return (0);
+			return ;
 		a = a->previous;
 	}
-	return (1);
+	exit(0);
 }
 
 void	ft_free_listarr(t_list **a, int *sort_arr)
@@ -18,43 +30,29 @@ void	ft_free_listarr(t_list **a, int *sort_arr)
 	free(sort_arr);
 }
 
-void	ft_read_operations(t_list **a, t_list **b)
-{
-	char	operation[4];
-	char	c;
-	int		i;
-
-	i = 0;
-	while (read(1, &c, 1))
-	{
-		if (c == '\n')
-		{
-			ft_check_operation(operation, a, b);
-			i = 0;
-		}
-		else
-			operation[i++] = c;
-		if (i == 4)
-			ft_error();
-	}
-}
-
 int	main(int argc, char *argv[])
 {
-	t_list	*a;
-	int		*arr;
-	t_list	*b;
+	t_list	*a;	
+	int		*sort_arr;
 
 	if (argc == 1)
 		return (0);
-	b = 0;
 	a = ft_filling_stack(argc, argv);
-	arr = ft_get_sort_arr(a);
-	ft_read_operations(&a, &b);
-	if (!ft_check_sort(a, arr))
-		write(1, "KO\n", 3);
+	sort_arr = ft_get_sort_arr(a);
+	ft_check_sort(a, sort_arr);
+	if (ft_lst_get_len(a) == 5)
+	{
+		ft_sort_five(&a, sort_arr);
+	}
+	else if (ft_lst_get_len(a) == 2)
+		write(1, "ra\n", 3);
 	else
-		write(1, "OK\n", 3);
-	ft_print_list(a);
-	ft_free_listarr(&a, arr);
+		ft_sort_algorithm(&a, sort_arr);
+	while (*sort_arr != a->val)
+	{
+		ft_reverse_rotate(&a);
+		write(1, "rra\n", 4);
+	}
+	ft_free_listarr(&a, sort_arr);
+	return (0);
 }

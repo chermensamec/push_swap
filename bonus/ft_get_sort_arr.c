@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:10:25 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:10:26 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/25 17:38:04 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	*ft_get_arr(t_list *lst)
 	len = ft_lst_get_len(lst);
 	arr = (int *)malloc (sizeof(int) * (ft_lst_get_len(lst)));
 	if (!arr)
-		return (0);
+		exit(1);
 	while (i < len)
 	{
 		arr[i++] = lst->val;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:16:07 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/22 23:25:05 by chermen          ###   ########.fr       */
+/*   Updated: 2022/02/25 18:05:00 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_rotate(t_list **lst)
 	t_list	*head;
 
 	if (!(*lst))
-		ft_error();
+		return ;
 	if (!(*lst)->previous)
 		return ;
 	head = (*lst);

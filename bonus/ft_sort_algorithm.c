@@ -6,18 +6,11 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:21:59 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:22:00 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/25 17:32:10 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-t_list	*ft_get_last(t_list *lst)
-{
-	while (lst->previous)
-		lst = lst->previous;
-	return (lst);
-}
 
 void	ft_sort_three_element(t_list **lst, int min, int mid, int max)
 {

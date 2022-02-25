@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 16:29:16 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/25 17:39:17 by onelda           ###   ########.fr       */
+/*   Created: 2022/02/25 19:15:42 by onelda            #+#    #+#             */
+/*   Updated: 2022/02/25 19:15:43 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -50,4 +50,5 @@ void	ft_set_onplace(t_list **a, t_list **b, t_list *belem);
 void	ft_sort_three_element(t_list **a, int min, int mid, int max);
 void	ft_sort_five(t_list **a, int *arr);
 void	ft_error(void);
+void	ft_check_operation(char *operation, t_list **a, t_list **b);
 #endif
