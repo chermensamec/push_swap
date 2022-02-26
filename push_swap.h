@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:29:16 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:29:17 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/26 14:47:05 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,10 @@ void	ft_sort_push_swap(t_list **a, t_list **b);
 void	ft_set_onplace(t_list **a, t_list **b, t_list *belem);
 void	ft_sort_three_element(t_list **a, int min, int mid, int max);
 void	ft_sort_five(t_list **a, int *arr);
-void	ft_error(void);
+void	ft_error_filling(char **res, t_list *a, int j);
+void	ft_error_bonus(t_list **a, t_list **b, int *sort_arr);
+int		ft_check_operation(char *operation, t_list **a, t_list **b);
+int		ft_check_minmax(const char *str);
+void	ft_free_listarr(t_list **a, int *sort_arr);
+int		ft_strcmp(const char *s1, const char *s2);
 #endif

@@ -18,8 +18,9 @@ void	ft_lst_pushfront(t_list **lst, t_list *new)
 		return ;
 	if (!*lst)
 	{
-		*lst = ft_lst_create(new->val);
-		free(new);
+		*lst = new;
+		(*lst)->next = 0;
+		(*lst)->previous = 0;
 		return ;
 	}
 	(*lst)->next = new;

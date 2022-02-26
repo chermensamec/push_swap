@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:28:19 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 18:46:55 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/26 01:36:46 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_check_sort(t_list *a, int *sort_arr)
 			return ;
 		a = a->previous;
 	}
+	ft_free_listarr(&a, sort_arr);
 	exit(0);
 }
 
@@ -34,7 +35,6 @@ int	main(int argc, char *argv[])
 {
 	t_list	*a;	
 	int		*sort_arr;
-	t_list	*tmp;
 
 	if (argc == 1)
 		return (0);

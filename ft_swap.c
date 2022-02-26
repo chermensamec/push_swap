@@ -6,7 +6,7 @@
 /*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:26:29 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 22:06:19 by chermen          ###   ########.fr       */
+/*   Updated: 2022/02/26 14:14:00 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_swap(t_list **lst)
 	t_list	*head;
 
 	head = *lst;
-	if (!(*lst)->previous)
+	if (!(*lst) || !(*lst)->previous)
 		return ;
 	tmp = (*lst)->previous;
 	if ((*lst)->previous->previous)
