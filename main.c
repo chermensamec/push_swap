@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:28:19 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/26 01:36:46 by chermen          ###   ########.fr       */
+/*   Updated: 2022/02/27 17:43:04 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	ft_check_sort(t_list *a, int *sort_arr)
 {
+	int		i;
+	t_list	*head;
 	while (a)
 	{
 		if (a->val != (*sort_arr++))
 			return ;
 		a = a->previous;
 	}
-	ft_free_listarr(&a, sort_arr);
+	ft_free_listarr(&head, sort_arr);
 	exit(0);
 }
 

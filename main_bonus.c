@@ -57,10 +57,9 @@ int	main(int argc, char *argv[])
 	arr = ft_get_sort_arr(a);
 	if (ft_read_operations(&a, &b))
 		ft_error_bonus(&a, &b, arr);
-	if (!ft_check_sort(a, arr))
+	if (!ft_check_sort(a, arr) || b)
 		write(1, "KO\n", 3);
 	else
 		write(1, "OK\n", 3);
-	ft_print_list(b);
 	ft_free_listarr_bonus(&a, &b, arr);
 }
