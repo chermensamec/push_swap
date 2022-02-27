@@ -2,16 +2,18 @@ NAME = push_swap
 NAME_BONUS = push_swap_bonus
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror 
-SRC = ft_filling_stack.c ft_lst_pushback.c\
-ft_rotate.c ft_split.c ft_get_sort_arr.c ft_lst_pushfront.c ft_strlen.c\
-ft_lst_create.c ft_swap.c\
-ft_atoi.c ft_lst_del.c ft_filling_stack_utils.c\
-ft_lst_get_len.c ft_push.c \
-ft_error.c ft_reverse_rotate.c 
-MANDATORY = main.c ft_sort_five.c ft_sort_algorithm.c ft_sort_push_swap.c ft_set_onplace.c
-BONUS_FILE = main_bonus.c ft_check_operation.c
+MANDATORY = ft_filling_stack.c ft_lst_pushback.c\
+ft_rotate.c ft_split.c ft_get_sort_arr.c ft_lst_pushfront.c ft_strlen.c ft_lst_create.c ft_swap.c\
+ft_atoi.c ft_lst_del.c ft_filling_stack_utils.c ft_lst_get_len.c ft_push.c\
+ft_error.c ft_reverse_rotate.c main.c ft_sort_five.c ft_sort_algorithm.c\
+ft_sort_push_swap.c ft_set_onplace.c
+BONUS_FILE = bonus/ft_atoi_bonus.c bonus/ft_filling_stack_utils_bonus.c bonus/ft_lst_get_len_bonus.c\
+bonus/ft_reverse_rotate_bonus.c bonus/ft_swap_bonus.c bonus/ft_check_operation_bonus.c\
+bonus/ft_get_sort_arr_bonus.c bonus/ft_lst_pushback_bonus.c bonus/ft_rotate_bonus.c\
+bonus/main_bonus.c bonus/ft_error_bonus.c bonus/ft_lst_create_bonus.c bonus/ft_lst_pushfront_bonus.c\
+bonus/ft_split_bonus.c bonus/ft_filling_stack_bonus.c bonus/ft_lst_del_bonus.c bonus/ft_push_bonus.c\
+bonus/ft_strlen_bonus.c
 
-OBJ = $(patsubst %.c,%.o,$(SRC))
 OBJ_MAN = $(patsubst %.c,%.o,$(MANDATORY))
 OBJ_BON = $(patsubst %.c,%.o,$(BONUS_FILE))
 
@@ -21,11 +23,11 @@ bonus : $(NAME_BONUS)
 
 $(NAME) : $(OBJ) $(OBJ_MAN)
 	rm -f $(OBJ_BON) $(NAME_BONUS)
-	$(CC) $(CFLAGS) $(OBJ) $(OBJ_MAN) -o $(NAME) 
+	$(CC) $(CFLAGS) $(OBJ_MAN) -o $(NAME) 
 
 $(NAME_BONUS) : $(OBJ) $(OBJ_BON)
 	rm -f $(OBJ_MAN) $(NAME)
-	$(CC) $(CFLAGS) $(OBJ_BON) $(OBJ) -o $(NAME_BONUS) 
+	$(CC) $(CFLAGS) $(OBJ_BON) -o $(NAME_BONUS) 
 
 %.o : %.c push_swap.h push_swap_bonus.h Makefile
 	gcc $(CFLAGS) -c $< -o $@ -g
