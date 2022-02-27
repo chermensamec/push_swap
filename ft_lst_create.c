@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lst_create.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:11:07 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:11:08 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/27 18:07:13 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
 
 t_list	*ft_lst_create(int val)
 {
