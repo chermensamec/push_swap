@@ -9,7 +9,7 @@
 /*   Updated: 2022/01/24 17:37:08 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	ft_strlen(const char *s)
 {

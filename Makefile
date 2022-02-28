@@ -22,11 +22,11 @@ all : $(NAME)
 bonus : $(NAME_BONUS)
 
 $(NAME) : $(OBJ) $(OBJ_MAN)
-	rm -f $(OBJ_BON) $(NAME_BONUS)
+	rm -f $(OBJ_BON)
 	$(CC) $(CFLAGS) $(OBJ_MAN) -o $(NAME) 
 
 $(NAME_BONUS) : $(OBJ) $(OBJ_BON)
-	rm -f $(OBJ_MAN) $(NAME)
+	rm -f $(OBJ_MAN)
 	$(CC) $(CFLAGS) $(OBJ_BON) -o $(NAME_BONUS) 
 
 %.o : %.c push_swap.h push_swap_bonus.h Makefile

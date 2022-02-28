@@ -9,7 +9,7 @@
 /*   Updated: 2022/02/21 16:02:08 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	ft_atoi(const char *str)
 {

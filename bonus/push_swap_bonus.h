@@ -6,7 +6,7 @@
 /*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:02:38 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/27 18:05:24 by onelda           ###   ########.fr       */
+/*   Updated: 2022/02/28 13:00:49 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		ft_lst_get_len(t_list *lst);
 void	ft_error_filling(char **res, t_list *a, int j);
 void	ft_error_bonus(t_list **a, t_list **b, int *sort_arr);
 int		ft_check_operation(char *operation, t_list **a, t_list **b);
-int		ft_check_minmax(const char *str);
+int		ft_check_minmax(char *str);
 void	ft_free_listarr(t_list **a, int *sort_arr);
 int		ft_strcmp(const char *s1, const char *s2);
 #endif
