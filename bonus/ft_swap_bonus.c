@@ -22,9 +22,12 @@ void	ft_swap(t_list **lst)
 		return ;
 	tmp = (*lst)->previous;
 	if ((*lst)->previous->previous)
+	{
 		head->previous = (*lst)->previous->previous;
-	if ((*lst)->previous->next)
 		head->previous->next = head;
+	}
+	else 
+		head->previous = 0; 
 	tmp->next = 0;
 	tmp->previous = head;
 	head->next = tmp;

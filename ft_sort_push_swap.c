@@ -30,6 +30,7 @@ void	ft_optimize(t_list *b)
 
 void	ft_count_operations(t_list *a, t_list *b, int place_a, int place_b)
 {
+
 	if (place_a <= ft_lst_get_len(a) / 2)
 	{
 		while (place_a--)
@@ -65,7 +66,7 @@ void	ft_find_place(t_list *a, t_list *b, int place_b)
 	head = a;
 	while (head)
 	{	
-		if (head->val < min && b->val < head->val)
+		if (head->val <= min && b->val < head->val)
 		{	
 			place_a = count;
 			min = head->val;
@@ -98,6 +99,7 @@ void	ft_sort_push_swap(t_list **a, t_list **b)
 {
 	int		count_b;
 	t_list	*head;
+
 
 	head = *b;
 	while (*b)

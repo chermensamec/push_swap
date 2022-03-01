@@ -1,5 +1,5 @@
 NAME = push_swap
-NAME_BONUS = push_swap_bonus
+NAME_BONUS = checker
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror 
 MANDATORY = ft_filling_stack.c ft_lst_pushback.c\
@@ -29,7 +29,7 @@ $(NAME_BONUS) : $(OBJ) $(OBJ_BON)
 	rm -f $(OBJ_MAN)
 	$(CC) $(CFLAGS) $(OBJ_BON) -o $(NAME_BONUS) 
 
-%.o : %.c push_swap.h push_swap_bonus.h Makefile
+%.o : %.c push_swap.h push_swap_bonus.h
 	gcc $(CFLAGS) -c $< -o $@ -g
 
 clean :

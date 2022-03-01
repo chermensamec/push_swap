@@ -13,9 +13,9 @@ int	ft_check_sort(t_list *a, int *sort_arr)
 
 void	ft_free_listarr_bonus(t_list **a, t_list **b, int *sort_arr)
 {
-	while (*b)
+	while (*b && b != 0)
 		ft_lst_del(b);
-	while (*a)
+	while (*a && a != 0)
 		ft_lst_del(a);
 	free(sort_arr);
 }
@@ -33,6 +33,7 @@ int	ft_read_operations(t_list **a, t_list **b)
 		{
 			if (ft_check_operation(operation, a, b))
 				return (1);
+			printf("%s\n", operation);
 			i = 0;
 			operation[2] = 0;
 		}

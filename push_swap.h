@@ -6,7 +6,7 @@
 /*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:29:16 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/28 12:54:14 by chermen          ###   ########.fr       */
+/*   Updated: 2022/03/02 00:58:52 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ char	**ft_split(char const *str, char s);
 int		ft_strlen(const char *s);
 int		ft_atoi(const char *s);
 t_list	*ft_filling_stack(int argc, char *argv[]);
-void	ft_print_list(t_list *lst);
-void	ft_print_list_reverse(t_list *lst);
 void	ft_sort_algorithm(t_list **lst, int *sort_arr);
 int		*ft_get_sort_arr(t_list *lst);
 int		ft_lst_get_len(t_list *lst);
@@ -52,7 +50,6 @@ void	ft_set_onplace(t_list **a, t_list **b, t_list *belem);
 void	ft_sort_three_element(t_list **a, int min, int mid, int max);
 void	ft_sort_five(t_list **a, int *arr);
 void	ft_error_filling(char **res, t_list *a, int j);
-void	ft_error_bonus(t_list **a, t_list **b, int *sort_arr);
 int		ft_check_minmax(char *str);
 void	ft_free_listarr(t_list **a, int *sort_arr);
 int		ft_strcmp(const char *s1, const char *s2);

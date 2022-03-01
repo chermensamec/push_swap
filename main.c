@@ -6,7 +6,7 @@
 /*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:28:19 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/27 17:52:38 by onelda           ###   ########.fr       */
+/*   Updated: 2022/03/02 00:59:26 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_check_sort(t_list *a, int *sort_arr)
 	int		i;
 	t_list	*head;
 
+	head = a;
 	i = 0;
 	while (a)
 	{
@@ -47,11 +48,12 @@ int	main(int argc, char *argv[])
 	sort_arr = ft_get_sort_arr(a);
 	ft_check_sort(a, sort_arr);
 	if (ft_lst_get_len(a) == 5)
-	{
 		ft_sort_five(&a, sort_arr);
-	}
 	else if (ft_lst_get_len(a) == 2)
-		write(1, "ra\n", 3);
+	{
+		write(1, "sa\n", 3);
+		ft_swap(&a);
+	}
 	else
 		ft_sort_algorithm(&a, sort_arr);
 	while (*sort_arr != a->val)

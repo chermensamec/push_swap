@@ -6,13 +6,13 @@
 /*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:02:38 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/28 13:00:49 by chermen          ###   ########.fr       */
+/*   Updated: 2022/03/02 00:58:07 by chermen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <stdlib.h>
 # include <stdio.h>
