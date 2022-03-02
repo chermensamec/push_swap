@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 15:39:48 by onelda            #+#    #+#             */
+/*   Updated: 2022/03/02 16:17:31 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap_bonus.h"
 
 int	ft_check_sort(t_list *a, int *sort_arr)
@@ -22,26 +34,24 @@ void	ft_free_listarr_bonus(t_list **a, t_list **b, int *sort_arr)
 
 int	ft_read_operations(t_list **a, t_list **b)
 {
-	char	operation[4];
-	char	c;
-	int		i;
+	char	*operation;
 
-	i = 0;
-	while (read(1, &c, 1))
+	operation = get_next_line(0);
+	while (operation)
 	{
-		if (c == '\n')
+		operation[ft_strlen(operation) - 1] = 0;
+		if (ft_check_operation(operation, a, b))
 		{
-			if (ft_check_operation(operation, a, b))
-				return (1);
-			printf("%s\n", operation);
-			i = 0;
-			operation[2] = 0;
-		}
-		else
-			operation[i++] = c;
-		if (i == 4)
+			if (operation)
+				free(operation);
 			return (1);
+		}
+		if (operation)
+			free(operation);
+		operation = get_next_line(0);
 	}
+	if (operation)
+		free(operation);
 	return (0);
 }
 

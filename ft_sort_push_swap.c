@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_push_swap.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onelda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:25:21 by onelda            #+#    #+#             */
-/*   Updated: 2022/02/21 16:25:22 by onelda           ###   ########.fr       */
+/*   Updated: 2022/03/02 15:37:30 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ft_optimize(t_list *b)
 
 void	ft_count_operations(t_list *a, t_list *b, int place_a, int place_b)
 {
-
 	if (place_a <= ft_lst_get_len(a) / 2)
 	{
 		while (place_a--)
@@ -99,7 +98,6 @@ void	ft_sort_push_swap(t_list **a, t_list **b)
 {
 	int		count_b;
 	t_list	*head;
-
 
 	head = *b;
 	while (*b)

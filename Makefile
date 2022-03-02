@@ -12,7 +12,7 @@ bonus/ft_reverse_rotate_bonus.c bonus/ft_swap_bonus.c bonus/ft_check_operation_b
 bonus/ft_get_sort_arr_bonus.c bonus/ft_lst_pushback_bonus.c bonus/ft_rotate_bonus.c\
 bonus/main_bonus.c bonus/ft_error_bonus.c bonus/ft_lst_create_bonus.c bonus/ft_lst_pushfront_bonus.c\
 bonus/ft_split_bonus.c bonus/ft_filling_stack_bonus.c bonus/ft_lst_del_bonus.c bonus/ft_push_bonus.c\
-bonus/ft_strlen_bonus.c
+bonus/ft_strlen_bonus.c bonus/get_next_line.c bonus/get_next_line_utils.c
 
 OBJ_MAN = $(patsubst %.c,%.o,$(MANDATORY))
 OBJ_BON = $(patsubst %.c,%.o,$(BONUS_FILE))
@@ -22,11 +22,9 @@ all : $(NAME)
 bonus : $(NAME_BONUS)
 
 $(NAME) : $(OBJ) $(OBJ_MAN)
-	rm -f $(OBJ_BON)
 	$(CC) $(CFLAGS) $(OBJ_MAN) -o $(NAME) 
 
 $(NAME_BONUS) : $(OBJ) $(OBJ_BON)
-	rm -f $(OBJ_MAN)
 	$(CC) $(CFLAGS) $(OBJ_BON) -o $(NAME_BONUS) 
 
 %.o : %.c push_swap.h push_swap_bonus.h

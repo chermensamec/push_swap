@@ -6,17 +6,16 @@
 /*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 18:02:38 by onelda            #+#    #+#             */
-/*   Updated: 2022/03/02 00:58:07 by chermen          ###   ########.fr       */
+/*   Updated: 2022/03/02 18:11:50 by onelda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef PUSH_SWAP_BONUS_H
 # define PUSH_SWAP_BONUS_H
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -31,6 +30,12 @@ typedef struct s_list
 	int				rr;
 }	t_list;
 
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+int		ft_strlen(const char *s);
+char	*get_next_line(int fd);
 t_list	*ft_lst_create(int val);
 void	ft_lst_pushfront(t_list **lst, t_list	*my_new);
 void	ft_lst_pushback(t_list **lst, t_list *my_new);
@@ -51,4 +56,5 @@ int		ft_check_operation(char *operation, t_list **a, t_list **b);
 int		ft_check_minmax(char *str);
 void	ft_free_listarr(t_list **a, int *sort_arr);
 int		ft_strcmp(const char *s1, const char *s2);
+char	*get_next_line(int fd);
 #endif

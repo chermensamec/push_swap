@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_filling_stack_utils.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onelda <onelda@student.21-school.ru>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 15:36:32 by onelda            #+#    #+#             */
+/*   Updated: 2022/03/02 15:37:09 by onelda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 #include <stdio.h>
 #define INT_MIN "-2147483648"
@@ -14,7 +26,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void ft_drop_zero(char **str)
+void	ft_drop_zero(char **str)
 {
 	while (**str == '0' && ft_strlen(*str) > 1)
 		(*str)++;
@@ -23,7 +35,7 @@ void ft_drop_zero(char **str)
 int	ft_check_minmax(char *str)
 {
 	int	len;
-	
+
 	ft_drop_zero(&str);
 	len = ft_strlen(str);
 	if (len >= 12)
